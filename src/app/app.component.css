@@ -1,0 +1,45 @@
+img{
+    cursor: pointer;
+    padding: 4px; ;
+    border-radius: 10px;
+    width: 6%;
+    height: 8%;
+    position: relative;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+}
+div{
+    margin-right: 30px; 
+}
+h3,p{
+    text-align: center;
+    color:red;
+  
+}
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+nav{
+    margin: 6%;
+    position: relative;
+    left: 30px;
+}
+.hr{
+   background:black; 
+   color: white;
+   position: relative;
+   left: 30px;
+
+}
+
+
+
+  
+

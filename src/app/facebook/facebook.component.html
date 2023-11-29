@@ -1,0 +1,35 @@
+<br>
+
+<div class="roow">
+    <h1>Formulario de FACEBOOK</h1>
+  </div>
+  
+  <div class="container">
+    <section id="preguntaActual">
+      <h3>{{ preguntaActualIndex + 1 }}- {{ obtenerPreguntaActual().enunciado }}</h3>
+  
+      <label *ngFor="let opcion of obtenerPreguntaActual().opciones">
+        <input type="radio" [value]="opcion.valor" [name]="'p' + preguntaActualIndex" (click)="respuesta(preguntaActualIndex, opcion.valor)">
+        {{ opcion.texto }}
+      </label>
+    </section>
+    
+  <div class="container">
+    <button (click)="siguientePregunta()" *ngIf="preguntaActualIndex < cuestionario.length - 1">Siguiente</button>
+  </div>
+  <br>
+    <button (click)="corregir()" *ngIf="mostrarBoton()">Resultado</button>
+    
+    <div *ngIf="aciertos !== null">
+  <br>
+      <h3>Puntos obtenidos = {{ aciertos }}</h3>
+  <br>
+      <div *ngIf="mensajeResultado">
+        <div style="color: red; font-size:xx-large; text-align: center; background-color: yellow;">
+          <strong>{{ mensajeResultado }}</strong>
+        </div>
+        <br>
+      <img src="https://usagif.com/wp-content/uploads/gifs/gracias-por-su-atencion-22.gif">
+      </div>
+    </div>
+  </div>
